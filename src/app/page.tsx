@@ -1,16 +1,12 @@
 import { ArrowRight, Code2, Cpu, Globe2, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import { BookCallModal } from "@/components/book-call-modal"
 
-const metrics = [
-  { label: "Clients Served", value: "100+" },
-  { label: "Projects Completed", value: "250+" },
-  { label: "Years Experience", value: "10+" },
-  { label: "Team Members", value: "50+" },
-]
+import { BookCallModal } from "@/components/book-call-modal"
+import AboutUs from "@/components/AboutUs"
+import  TestimonialsSection  from "@/components/Testimonials"
+
+
 
 const services = [
   {
@@ -77,7 +73,7 @@ const testimonials = [
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader />
+     
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 md:py-32">
@@ -85,7 +81,7 @@ export default function Home() {
             <div className="gradient-bg absolute inset-0" />
           </div>
           <div className="container relative">
-            <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto max-w-2xl text-center bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Transforming Ideas into Digital Reality</h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
                 We are a team of passionate developers and designers creating innovative software solutions for
@@ -93,31 +89,16 @@ export default function Home() {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <BookCallModal>
-                  <Button size="lg">Book a Live Call</Button>
+                  <Button size="lg" >Book a Live Call</Button>
                 </BookCallModal>
-                <Button variant="ghost" size="lg">
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+              
               </div>
             </div>
           </div>
         </section>
-
-        {/* Metrics Section */}
-        <section className="container py-16">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {metrics.map((metric) => (
-              <Card key={metric.label}>
-                <CardHeader>
-                  <CardTitle className="text-3xl font-bold">{metric.value}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{metric.label}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+ <AboutUs/>
+    
+       
 
         {/* Services Section */}
         <section className="container py-16">
@@ -171,6 +152,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
+        <TestimonialsSection/>
         <section className="container py-16">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What Our Clients Say</h2>
@@ -217,7 +199,6 @@ export default function Home() {
           </Card>
         </section>
       </main>
-      <SiteFooter />
     </div>
   )
 }

@@ -1,96 +1,147 @@
-import { Code2, Cpu, Database, Globe2, Layout, Smartphone } from "lucide-react"
-
+import { Github, Linkedin, Twitter } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 
-const services = [
+
+const team = [
   {
-    title: "Web Development",
-    description: "Building modern, responsive websites and web applications using cutting-edge technologies.",
-    icon: Globe2,
-    features: ["Custom Web Applications", "E-commerce Solutions", "Progressive Web Apps", "API Development"],
+    name: "John Smith",
+    role: "CEO & Founder",
+    bio: "15+ years of experience in software development and team leadership.",
+    image: "/placeholder.svg?height=400&width=400",
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+    },
+    skills: ["Leadership", "Strategy", "Software Architecture"],
   },
   {
-    title: "Mobile Apps",
-    description: "Native and cross-platform mobile application development for iOS and Android.",
-    icon: Smartphone,
-    features: ["iOS Development", "Android Development", "Cross-platform Solutions", "App Store Optimization"],
+    name: "Sarah Johnson",
+    role: "CTO",
+    bio: "Expert in cloud architecture and distributed systems.",
+    image: "/placeholder.svg?height=400&width=400",
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+    },
+    skills: ["Cloud Computing", "System Design", "Team Management"],
   },
   {
-    title: "UI/UX Design",
-    description: "Creating intuitive and beautiful user interfaces that deliver exceptional user experiences.",
-    icon: Layout,
-    features: ["User Interface Design", "User Experience Design", "Prototyping", "Design Systems"],
+    name: "Michael Chen",
+    role: "Lead Developer",
+    bio: "Full-stack developer with a passion for clean code and best practices.",
+    image: "/placeholder.svg?height=400&width=400",
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+    },
+    skills: ["React", "Node.js", "TypeScript"],
   },
   {
-    title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and DevOps services for modern applications.",
-    icon: Cpu,
-    features: ["Cloud Architecture", "DevOps Services", "Server Management", "Performance Optimization"],
+    name: "Emily Brown",
+    role: "UI/UX Designer",
+    bio: "Creating beautiful and intuitive user experiences.",
+    image: "/placeholder.svg?height=400&width=400",
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+    },
+    skills: ["UI Design", "UX Research", "Prototyping"],
   },
   {
-    title: "Backend Development",
-    description: "Robust and scalable backend solutions to power your applications.",
-    icon: Database,
-    features: ["API Development", "Database Design", "Microservices", "System Integration"],
+    name: "David Wilson",
+    role: "DevOps Engineer",
+    bio: "Automation expert with a focus on CI/CD and cloud infrastructure.",
+    image: "/placeholder.svg?height=400&width=400",
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+    },
+    skills: ["AWS", "Docker", "Kubernetes"],
   },
   {
-    title: "Custom Software",
-    description: "Tailored software solutions designed to meet your specific business needs.",
-    icon: Code2,
-    features: ["Enterprise Software", "CRM Systems", "Workflow Automation", "Legacy System Migration"],
+    name: "Lisa Anderson",
+    role: "Project Manager",
+    bio: "Certified PMP with experience in agile methodologies.",
+    image: "/placeholder.svg?height=400&width=400",
+    social: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+    },
+    skills: ["Agile", "Scrum", "Risk Management"],
   },
 ]
 
 export const metadata = {
-  title: "Services | Coura - Code with Aura",
+  title: "Team | Coura - Code with Aura",
   description:
-    "Explore our comprehensive range of software development services including web development, mobile apps, UI/UX design, and cloud solutions.",
+    "Meet our talented team of developers, designers, and technology experts who make digital innovation possible.",
 }
 
-export default function ServicesPage() {
+export default function TeamPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader />
+     
       <main className="flex-1">
         <section className="container py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Services</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Team</h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              We offer a comprehensive range of software development services to help your business thrive in the
-              digital age.
+              Meet the talented individuals who make digital innovation possible.
             </p>
           </div>
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => {
-              const Icon = service.icon
-              return (
-                <Card key={service.title} className="relative overflow-hidden">
-                  <CardHeader>
-                    <div className="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <Icon className="size-6" />
-                    </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="grid gap-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-sm text-muted-foreground">
-                          <div className="mr-2 size-1 rounded-full bg-primary" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              )
-            })}
+            {team.map((member) => (
+              <Card key={member.name} className="overflow-hidden">
+                <div className="aspect-square overflow-hidden">
+                  <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full object-cover" />
+                </div>
+                <CardHeader>
+                  <CardTitle>{member.name}</CardTitle>
+                  <CardDescription className="text-primary">{member.role}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-sm text-muted-foreground">{member.bio}</p>
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {member.skills.map((skill) => (
+                      <span key={skill} className="rounded-full bg-primary/10 px-3 py-1 text-xs text-primary">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href={member.social.twitter} target="_blank" rel="noopener noreferrer">
+                        <Twitter className="size-4" />
+                        <span className="sr-only">Twitter</span>
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
+                        <Linkedin className="size-4" />
+                        <span className="sr-only">LinkedIn</span>
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href={member.social.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="size-4" />
+                        <span className="sr-only">GitHub</span>
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
       </main>
-      <SiteFooter />
+    
     </div>
   )
 }

@@ -1,8 +1,7 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
+
 
 const projects = [
   {
@@ -58,7 +57,7 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader />
+     
       <main className="flex-1">
         <section className="container py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
@@ -102,7 +101,7 @@ export default function ProjectsPage() {
           </div>
         </section>
       </main>
-      <SiteFooter />
+    
     </div>
   )
 }

@@ -10,8 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -46,7 +44,7 @@ export default function ContactPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader />
+     
       <main className="flex-1">
         <section className="container py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
@@ -177,7 +175,7 @@ export default function ContactPage() {
           </Card>
         </section>
       </main>
-      <SiteFooter />
+     
     </div>
   )
 }
