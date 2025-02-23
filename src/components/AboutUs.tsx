@@ -2,6 +2,7 @@
 
 import type React from "react"
 
+import { BookCallModal } from "@/components/book-call-modal"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Code2, Cpu, Globe, Sparkles } from "lucide-react"
@@ -9,29 +10,24 @@ import { motion } from "framer-motion"
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 text-white">
+    <div className="min-h-screen bg-black-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent" />
-        <div className="container mx-auto px-4 py-24 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center space-y-6"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              Coura
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">
-                {" "}
-                Software House
-              </span>
-            </h1>
-            <p className="text-2xl md:text-3xl font-light text-slate-300">Code with Aura</p>
-          </motion.div>
-        </div>
-      </section>
-
+     
+      <div className="container relative">
+            <div className="mx-auto max-w-2xl text-center bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Transforming Ideas into Digital Reality</h1>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                We are a team of passionate developers and designers creating innovative software solutions for
+                businesses worldwide.
+              </p>
+              <div className="mt-10 flex items-center justify-center gap-x-6">
+                <BookCallModal>
+                  <Button size="lg" >Book a Live Call</Button>
+                </BookCallModal>
+              
+              </div>
+            </div>
+          </div>
       {/* Mission Section */}
       <section className="container mx-auto px-4 py-16">
         <motion.div
@@ -41,16 +37,13 @@ export default function AboutUs() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center space-y-8"
         >
-          <h2 className="text-3xl font-bold">Our Mission</h2>
+          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">Our Mission</h2>
           <p className="text-lg text-slate-300 leading-relaxed">
             At Coura, we believe in transforming ideas into digital masterpieces. We infuse every line of code with
             creativity, innovation, and a touch of magic. Our mission is to create software solutions that not only meet
             technical requirements but radiate excellence and inspiration.
           </p>
-          <Button variant="outline" className="border-indigo-500/50 hover:border-indigo-400 hover:bg-indigo-950/50">
-            Learn More About Our Process
-            <Sparkles className="ml-2 h-4 w-4" />
-          </Button>
+         
         </motion.div>
       </section>
 

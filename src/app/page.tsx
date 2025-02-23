@@ -1,7 +1,9 @@
+"use client"
+
 import { ArrowRight, Code2, Cpu, Globe2, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-
+import {  motion} from 'framer-motion'
 import { BookCallModal } from "@/components/book-call-modal"
 import AboutUs from "@/components/AboutUs"
 import  TestimonialsSection  from "@/components/Testimonials"
@@ -72,7 +74,7 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen bg-black flex-col">
      
       <main className="flex-1">
         {/* Hero Section */}
@@ -80,21 +82,23 @@ export default function Home() {
           <div className="absolute inset-0 -z-10">
             <div className="gradient-bg absolute inset-0" />
           </div>
-          <div className="container relative">
-            <div className="mx-auto max-w-2xl text-center bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Transforming Ideas into Digital Reality</h1>
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                We are a team of passionate developers and designers creating innovative software solutions for
-                businesses worldwide.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <BookCallModal>
-                  <Button size="lg" >Book a Live Call</Button>
-                </BookCallModal>
-              
-              </div>
-            </div>
-          </div>
+          <section className="relative overflow-hidden">
+                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black-500/20 via-transparent to-transparent" />
+                 <div className="container mx-auto px-4 py-24 relative">
+                   <motion.div
+                     initial={{ opacity: 0, y: 20 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.8 }}
+                     className="text-center space-y-6"
+                   >
+                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF] ">
+                       Coura
+                       
+                     </h1>
+                     <p className="text-2xl md:text-3xl font-light text-slate-300">Code with Aura</p>
+                   </motion.div>
+                 </div>
+               </section>
         </section>
  <AboutUs/>
     
