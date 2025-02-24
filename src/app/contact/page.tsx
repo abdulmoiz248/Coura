@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { ChatWindow } from "@/components/chat-window"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -44,11 +45,12 @@ export default function ContactPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-     
       <main className="flex-1">
         <section className="container py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Contact Us</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
+              Contact Us
+            </h1>
             <p className="mt-4 text-lg text-muted-foreground">Get in touch with us. We'd love to hear from you.</p>
           </div>
 
@@ -104,7 +106,9 @@ export default function ContactPage() {
 
           <Card className="mx-auto mt-16 max-w-2xl">
             <CardHeader>
-              <CardTitle>Send us a message</CardTitle>
+              <CardTitle className="bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
+                Send us a message
+              </CardTitle>
               <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
             </CardHeader>
             <CardContent>
@@ -175,7 +179,7 @@ export default function ContactPage() {
           </Card>
         </section>
       </main>
-     
+      <ChatWindow />
     </div>
   )
 }

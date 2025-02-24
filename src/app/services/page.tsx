@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 // import { BookCallDialog } from "@/components/book-call-dialog";
+import { BookCallModal } from "@/components/book-call-modal";
 import {
   Code2,
   Smartphone,
@@ -133,7 +134,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="container mb-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-6">Our Services</h1>
+          <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">Our Services</h1>
           <p className="text-xl text-muted-foreground">
             We offer a comprehensive range of software development services
             to help your business succeed in the digital world.
@@ -147,10 +148,10 @@ export default function ServicesPage() {
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <div className="mb-4 text-primary group-hover:scale-110 transition-transform">
+                <div className="mb-4 text-primary  group-hover:scale-110 transition-transform">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">{service.title}</h3>
                 <p className="text-muted-foreground mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
@@ -168,12 +169,17 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="container mt-16">
-        <Card className="bg-primary text-primary-foreground">
+        <Card className="bg-primary text-primary-foreground  bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
           <CardContent className="p-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Let's discuss how our services can help you achieve your business goals.
             </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <BookCallModal>
+              <Button size="lg">Book a Live Call</Button>
+            </BookCallModal>
+          </div>
             {/* <BookCallDialog>
               <Button size="lg" variant="secondary">
                 Schedule a Consultation

@@ -61,7 +61,7 @@ export default function ProjectsPage() {
       <main className="flex-1">
         <section className="container py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Projects</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">Our Projects</h1>
             <p className="mt-4 text-lg text-muted-foreground">
               Take a look at some of our recent work and success stories.
             </p>

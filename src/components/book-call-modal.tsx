@@ -94,20 +94,10 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   className="relative w-full max-w-[500px] overflow-hidden rounded-xl border bg-background/95 p-6 shadow-lg"
                 >
-                  {/* Decorative elements */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background -z-10" />
-                  <div className="absolute inset-0 bg-[radial-gradient(40%_40%_at_50%_50%,rgba(var(--primary-rgb),0.1)_0,rgba(var(--primary-rgb),0)_100%)] -z-10" />
-                  <motion.div
-                    className="absolute right-4 top-4 text-primary/20"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                  >
-                    <Sparkles className="h-6 w-6" />
-                  </motion.div>
-
+               
                   <DialogHeader>
                     <motion.div initial="hidden" animate="visible" variants={fadeIn} custom={0}>
-                      <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
+                      <DialogTitle className="bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF] text-2xl font-bold ">
                         Book a Live Call
                       </DialogTitle>
                     </motion.div>
@@ -137,7 +127,7 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
                                 <Input
                                   placeholder="John Doe"
                                   {...field}
-                                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
+                                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 text-white"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -155,7 +145,7 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
                                   type="email"
                                   placeholder="john@example.com"
                                   {...field}
-                                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
+                                  className="transition-all text-white duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -182,7 +172,7 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
                                   type="tel"
                                   placeholder="(+92) 123-4567"
                                   {...field}
-                                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
+                                  className="transition-all text-white duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -199,7 +189,7 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
                                 <Input
                                   placeholder="Acme Inc."
                                   {...field}
-                                  className="transition-all duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
+                                  className="transition-all text-white duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -219,7 +209,7 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
                                 <Textarea
                                   placeholder="Tell us about your project..."
                                   {...field}
-                                  className="min-h-[120px] transition-all duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
+                                  className="min-h-[120px] text-white transition-all duration-300 focus:ring-2 focus:ring-primary/20 bg-background/50 backdrop-blur-sm"
                                 />
                               </FormControl>
                               <FormMessage />
@@ -239,7 +229,7 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
                           variant="outline"
                           onClick={() => setOpen(false)}
                           type="button"
-                          className="transition-all duration-300 hover:bg-background/80"
+                          className="transition-all text-white duration-300 hover:bg-background/80"
                         >
                           Cancel
                         </Button>
