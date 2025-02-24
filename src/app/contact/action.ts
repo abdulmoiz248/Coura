@@ -8,7 +8,7 @@ interface ChatCompletionMessageParam {
 }
 
 const prompt='you are a personal assistant';
-let messages:ChatCompletionMessageParam[]= [
+const messages:ChatCompletionMessageParam[]= [
     {
       role: "system",
       content: prompt,

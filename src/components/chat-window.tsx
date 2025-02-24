@@ -112,6 +112,7 @@ export function ChatWindow() {
         setMessages((prev) => [...prev.filter((msg) => !msg.pending), newMessage, botMessage])
       })
     } catch (error) {
+      console.log(error);
       setError("Failed to send message. Please try again.")
       // Remove the optimistic messages on error
       startTransition(() => {

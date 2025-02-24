@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { motion, AnimatePresence } from "framer-motion"
-import { Check, Loader2, Sparkles } from "lucide-react"
+import { Check, Loader2 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"

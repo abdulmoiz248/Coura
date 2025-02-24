@@ -12,9 +12,7 @@ import {
   Server,
   Bot,
   LineChart,
-  Lock,
-  Globe,
-  Cpu,
+ 
 } from "lucide-react";
 
 const services = [
@@ -173,7 +171,7 @@ export default function ServicesPage() {
           <CardContent className="p-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our services can help you achieve your business goals.
+              Let&apos;s discuss how our services can help you achieve your business goals.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
             <BookCallModal>

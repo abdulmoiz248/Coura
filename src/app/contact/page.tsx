@@ -51,7 +51,7 @@ export default function ContactPage() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
               Contact Us
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground">Get in touch with us. We'd love to hear from you.</p>
+            <p className="mt-4 text-lg text-muted-foreground">Get in touch with us. We&apos;d love to hear from you.</p>
           </div>
 
           <div className="mt-16 grid gap-8 lg:grid-cols-3">
@@ -109,7 +109,7 @@ export default function ContactPage() {
               <CardTitle className="bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
                 Send us a message
               </CardTitle>
-              <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
+              <CardDescription>Fill out the form below and we&apos;ll get back to you as soon as possible.</CardDescription>
             </CardHeader>
             <CardContent>
               <Form {...form}>

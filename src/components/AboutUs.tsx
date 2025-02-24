@@ -71,7 +71,7 @@ export default function AboutUs() {
       <section className="container mx-auto px-4 py-24">
         <div className="text-center space-y-6">
           <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">Ready to Add Some Aura to Your Code?</h2>
-          <p className="text-lg text-slate-300">Let's create something extraordinary together</p>
+          <p className="text-lg text-slate-300">Let&apos;s create something extraordinary together</p>
        
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <BookCallModal>

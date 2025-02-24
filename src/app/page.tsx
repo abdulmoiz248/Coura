@@ -1,12 +1,12 @@
 "use client"
 
-import { ArrowRight, Code2, Cpu, Globe2, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {  motion} from 'framer-motion'
 import { BookCallModal } from "@/components/book-call-modal"
 import AboutUs from "@/components/AboutUs"
 import  TestimonialsSection  from "@/components/Testimonials"
+import Image from "next/image"
 
 
 
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <Card key={project.title} className="overflow-hidden">
-                <img
+                <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   className="aspect-video w-full object-cover transition-transform duration-300 hover:scale-105"
