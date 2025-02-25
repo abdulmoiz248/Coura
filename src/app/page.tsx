@@ -76,9 +76,11 @@ export default function Home() {
             {projects.map((project) => (
               <Card key={project.title} className="overflow-hidden">
                 <Image
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image }
                   alt={project.title}
-                  className="aspect-video w-full object-cover transition-transform duration-300 hover:scale-105"
+                  width='400'
+                  height='400'
+                  className="aspect-video  object-contain transition-transform duration-300 hover:scale-105"
                 />
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>

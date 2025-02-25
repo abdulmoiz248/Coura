@@ -1,36 +1,31 @@
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react" 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
+import Link from "next/link"
 
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured online shopping platform with real-time inventory management and analytics.",
+    title: "Zero Limit Apparel",
+    description: "An e-commerce platform for streetwear apparel with real-time inventory and analytics.",
+    image: "/zero.png",
+    category: "Web Development",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    link: "https://zero-limit.vercel.app/",
+  },
+  {
+    title: "BakeBot",
+    description: "A monorepo project integrating web and mobile chat applications with real-time synchronization.",
+    image: "/placeholder.svg?height=400&width=600",
+    category: "Full-Stack Development",
+    technologies: ["Next.js", "NestJS", "React Native", "Socket.io", "MongoDB"],
+  },
+  {
+    title: "Finance Admin Dashboard",
+    description: "A finance-focused Next.js app for e-commerce admin, including order management, analytics, and invoice generation.",
     image: "/placeholder.svg?height=400&width=600",
     category: "Web Development",
-    technologies: ["Next.js", "Node.js", "PostgreSQL", "Redis"],
-  },
-  {
-    title: "Healthcare App",
-    description: "Mobile application for patient management and telemedicine services.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Mobile Development",
-    technologies: ["React Native", "Firebase", "WebRTC"],
-  },
-  {
-    title: "FinTech Dashboard",
-    description: "Real-time financial data visualization and analytics platform for investment firms.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Web Development",
-    technologies: ["React", "D3.js", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Smart Home IoT Platform",
-    description: "IoT platform for managing and monitoring smart home devices with real-time updates.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "IoT",
-    technologies: ["Python", "MQTT", "React", "AWS IoT"],
+    technologies: ["Next.js", "MongoDB", "Redux", "Tailwind CSS"],
   },
   {
     title: "AI-Powered CRM",
@@ -46,7 +41,15 @@ const projects = [
     category: "Blockchain",
     technologies: ["Solidity", "React", "Node.js", "Ethereum"],
   },
+  {
+    title: "AI Chat Assistant",
+    description: "Telegram-based AI assistant for reminders, financial reports, and real-time notifications.",
+    image: "/placeholder.svg?height=400&width=600",
+    category: "AI & Automation",
+    technologies: ["Python", "Langchain", "MongoDB", "OpenAI API"],
+  },
 ]
+
 
 export const metadata = {
   title: "Projects | Coura - Code with Aura",
@@ -69,13 +72,16 @@ export default function ProjectsPage() {
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <Card key={project.title} className="group overflow-hidden">
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+               <div className="aspect-video overflow-hidden">
+  <Image
+    src={project.image}
+    alt={project.title}
+    width={600}
+    height={400}
+    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+  />
+</div>
+
                 <CardHeader>
                   <div className="flex items-center gap-2">
                     <span className="text-sm text-primary">{project.category}</span>
@@ -91,10 +97,11 @@ export default function ProjectsPage() {
                       </span>
                     ))}
                   </div>
-                  <Button variant="ghost" className="group/btn w-full justify-between">
-                    View Case Study
+                 {project.link &&
+                  <Link  href={project.link} className="group/btn w-full justify-between flex">
+                    View Project
                     <ArrowRight className="size-4 transition-transform group-hover/btn:translate-x-1" />
-                  </Button>
+                  </Link>}
                 </CardContent>
               </Card>
             ))}

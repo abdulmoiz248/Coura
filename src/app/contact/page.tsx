@@ -26,6 +26,11 @@ const formSchema = z.object({
     message: "Message must be at least 10 characters.",
   }),
 })
+export const metadata = {
+  title: "Contact | Coura - Code with Aura",
+  description:
+    "Contact us"
+}
 
 export default function ContactPage() {
   const form = useForm<z.infer<typeof formSchema>>({

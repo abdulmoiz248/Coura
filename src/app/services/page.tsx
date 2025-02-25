@@ -15,6 +15,12 @@ import {
  
 } from "lucide-react";
 
+export const metadata = {
+  title: "Service | Coura - Code with Aura",
+  description:
+    "Explore our services across web development, mobile apps, IoT, and enterprise solutions.",
+}
+
 const services = [
   {
     icon: <Code2 className="h-12 w-12" />,

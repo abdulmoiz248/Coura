@@ -5,29 +5,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const team = [
   {
-    name: "John Smith",
-    role: "CEO & Founder",
-    bio: "15+ years of experience in software development and team leadership.",
-    image: "/placeholder.svg?height=400&width=400",
+    name: "Zain ul Abideen",
+    role: "AI/ML Engineer",
+    bio: "Passionate about AI-driven solutions, with expertise in building scalable machine learning systems.",
+    image: "/zain.jpg",
     social: {
-      twitter: "#",
-      linkedin: "#",
-      github: "#",
+      linkedin: "https://www.linkedin.com/in/zain-ul-abideen-275535325/",
+      github: "https://github.com/codewithzainkhan"
     },
-    skills: ["Leadership", "Strategy", "Software Architecture"],
+    skills: ["Machine Learning", "Deep Learning", "Software Architecture", "AI Strategy"]
+},
+{
+  name: "Abdul Moiz",
+  role: "Full-Stack Developer | AI Enthusiast",
+  bio: "Building scalable web apps  and diving into AI & machine learning.",
+  image: "/moiz.jpg",
+  social: {
+   
+    linkedin: "https://www.linkedin.com/in/abdul-moiz-170222246/",
+    github: "https://github.com/abdulmoiz248"
   },
-  {
-    name: "Sarah Johnson",
-    role: "CTO",
-    bio: "Expert in cloud architecture and distributed systems.",
-    image: "/placeholder.svg?height=400&width=400",
-    social: {
-      twitter: "#",
-      linkedin: "#",
-      github: "#",
-    },
-    skills: ["Cloud Computing", "System Design", "Team Management"],
-  },
+  skills: ["Full-Stack Development", "Machine Learning", "Software Architecture", "NestJS", "Next.js", "Redux"]
+}
+,
   {
     name: "Michael Chen",
     role: "Lead Developer",
@@ -116,12 +116,7 @@ export default function TeamPage() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <Button variant="ghost" size="icon" asChild>
-                      <a href={member.social.twitter} target="_blank" rel="noopener noreferrer">
-                        <Twitter className="size-4" />
-                        <span className="sr-only">Twitter</span>
-                      </a>
-                    </Button>
+                   
                     <Button variant="ghost" size="icon" asChild>
                       <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
                         <Linkedin className="size-4" />
