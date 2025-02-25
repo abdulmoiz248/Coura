@@ -14,12 +14,14 @@ const projects = [
     link: "https://zero-limit.vercel.app/",
   },
   {
-    title: "BakeBot",
-    description: "A monorepo project integrating web and mobile chat applications with real-time synchronization.",
-    image: "/placeholder.svg?height=400&width=600",
-    category: "Full-Stack Development",
-    technologies: ["Next.js", "NestJS", "React Native", "Socket.io", "MongoDB"],
-  },
+    "title": "BakeBot",
+    "description": "An AI-powered baking assistant that provides real-time recipe suggestions, ingredient tracking, and step-by-step baking guidance across web and mobile platforms.",
+    "image": "/bakebot.jpg",
+    "category": "AI & Full-Stack Development",
+    "technologies": ["Express.js", "React", "Python",  "OpenAI API"],
+    link:"https://www.linkedin.com/posts/abdul-moiz-170222246_ai-react-expressjs-activity-7291871042807951360-3Y0B?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzmqGQBzRcgJ9xzhcimEb71Ou7AeDJKJxw"
+}
+,
   {
     title: "Finance Admin Dashboard",
     description: "A finance-focused Next.js app for e-commerce admin, including order management, analytics, and invoice generation.",
@@ -43,10 +45,10 @@ const projects = [
   },
   {
     title: "AI Chat Assistant",
-    description: "Telegram-based AI assistant for reminders, financial reports, and real-time notifications.",
-    image: "/placeholder.svg?height=400&width=600",
+    description: "Discord-based AI assistant for reminders, financial reports, and real-time notifications.",
+    image: "/assistant.png",
     category: "AI & Automation",
-    technologies: ["Python", "Langchain", "MongoDB", "OpenAI API"],
+    technologies: ["TypeScript", "Nest", "MongoDB", "OpenAI API"],
   },
 ]
 

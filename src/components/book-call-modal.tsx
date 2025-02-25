@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { motion, AnimatePresence } from "framer-motion"
 import { Check, Loader2 } from "lucide-react"
-
+import axios from "axios"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -62,7 +62,12 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    
+    let res=await axios.post('/api/book-call',values);
+    while(res.status==504){ //countering vercel 504
+      res=await axios.post('/api/book-call',values); 
+    }
+    if(res.data.success) {
     console.log(values)
     setIsSubmitting(false)
     setIsSuccess(true)
@@ -71,6 +76,7 @@ export function BookCallModal({ children }: { children: React.ReactNode }) {
       setIsSuccess(false)
       form.reset()
     }, 1500)
+  }
   }
 
   return (

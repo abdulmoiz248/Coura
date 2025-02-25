@@ -1,6 +1,7 @@
-import { Github, Linkedin, Twitter } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 
 
 const team = [
@@ -100,7 +101,7 @@ export default function TeamPage() {
             {team.map((member) => (
               <Card key={member.name} className="overflow-hidden">
                 <div className="aspect-square overflow-hidden">
-                  <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full object-cover" />
+                  <Image  src={member.image} alt={member.name} className="w-full object-cover" />
                 </div>
                 <CardHeader>
                   <CardTitle>{member.name}</CardTitle>

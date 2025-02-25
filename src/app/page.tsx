@@ -23,11 +23,7 @@ const projects = [
     description: "An Ai chatbot that helps you in cooking",
     image: "/bakebot.jpg",
   },
-  {
-    title: "FinTech Dashboard",
-    description: "Real-time financial data visualization and analytics platform.",
-    image: "/placeholder.svg?height=400&width=600",
-  },
+ 
 ]
 
 
@@ -67,29 +63,32 @@ export default function Home() {
        
 
         {/* Projects Section */}
-        <section className="container py-16">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">Featured Projects</h2>
-            <p className="mt-4 text-muted-foreground">Take a look at some of our recent work.</p>
-          </div>
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <Card key={project.title} className="overflow-hidden">
-                <Image
-                  src={project.image }
-                  alt={project.title}
-                  width='400'
-                  height='400'
-                  className="aspect-video  object-contain transition-transform duration-300 hover:scale-105"
-                />
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </section>
+        <section className="container py-16 flex flex-col items-center">
+  <div className="mx-auto max-w-2xl text-center">
+    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">
+      Featured Projects
+    </h2>
+    <p className="mt-4 text-muted-foreground">Take a look at some of our recent work.</p>
+  </div>
+  
+  <div className={`mt-16 grid gap-8 ${projects.length === 2 ? "grid-cols-1 sm:grid-cols-2 justify-center" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+    {projects.map((project) => (
+      <Card key={project.title} className="overflow-hidden mx-auto w-full max-w-[400px]">
+        <Image
+          src={project.image}
+          alt={project.title}
+          width="400"
+          height="400"
+          className="aspect-video object-contain transition-transform duration-300 hover:scale-105"
+        />
+        <CardHeader>
+          <CardTitle className="text-center">{project.title}</CardTitle>
+          <CardDescription className="text-center">{project.description}</CardDescription>
+        </CardHeader>
+      </Card>
+    ))}
+  </div>
+</section>
 
         {/* Testimonials Section */}
         <TestimonialsSection/>
