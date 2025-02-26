@@ -78,8 +78,8 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  <a href="mailto:hello@coura.dev" className="hover:text-primary">
-                    hello@coura.dev
+                  <a href="mailto:coura.tech@gmail.com" className="hover:text-primary">
+                    coura.tech
                   </a>
                 </CardDescription>
               </CardContent>
@@ -94,8 +94,8 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  <a href="tel:+15551234567" className="hover:text-primary">
-                    (555) 123-4567
+                  <a href="tel:+923080485737" className="hover:text-primary">
+                    +92 308 COURA
                   </a>
                 </CardDescription>
               </CardContent>
@@ -110,9 +110,9 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  123 Tech Street
-                  <br />
-                  Digital City, DC 12345
+                  Lahore, Pakistan
+                 
+                
                 </CardDescription>
               </CardContent>
             </Card>
