@@ -30,53 +30,18 @@ const team = [
 }
 ,
   {
-    name: "Michael Chen",
-    role: "Lead Developer",
-    bio: "Full-stack developer with a passion for clean code and best practices.",
-    image: "/placeholder.svg?height=400&width=400",
+    name: "Haris Imran",
+    role: "React Native Developer",
+    bio: "Building cross-platform mobile apps with a focus on performance and user experience.",
+ 
+    image: "/haris.jpg",
     social: {
-      twitter: "#",
       linkedin: "#",
-      github: "#",
+      github: "https://github.com/ch-harisimran",
     },
-    skills: ["React", "Node.js", "TypeScript"],
+    skills: ["React", "React Native", "TypeScript"],
   },
-  {
-    name: "Emily Brown",
-    role: "UI/UX Designer",
-    bio: "Creating beautiful and intuitive user experiences.",
-    image: "/placeholder.svg?height=400&width=400",
-    social: {
-      twitter: "#",
-      linkedin: "#",
-      github: "#",
-    },
-    skills: ["UI Design", "UX Research", "Prototyping"],
-  },
-  {
-    name: "David Wilson",
-    role: "DevOps Engineer",
-    bio: "Automation expert with a focus on CI/CD and cloud infrastructure.",
-    image: "/placeholder.svg?height=400&width=400",
-    social: {
-      twitter: "#",
-      linkedin: "#",
-      github: "#",
-    },
-    skills: ["AWS", "Docker", "Kubernetes"],
-  },
-  {
-    name: "Lisa Anderson",
-    role: "Project Manager",
-    bio: "Certified PMP with experience in agile methodologies.",
-    image: "/placeholder.svg?height=400&width=400",
-    social: {
-      twitter: "#",
-      linkedin: "#",
-      github: "#",
-    },
-    skills: ["Agile", "Scrum", "Risk Management"],
-  },
+  
 ]
 
 export const metadata = {
