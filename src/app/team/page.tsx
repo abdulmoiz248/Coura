@@ -65,7 +65,7 @@ const team = [
 },{
   "name": "Abdul Muqeet",
   "role": "Client Relations & Talent Acquisition Specialist",
-  "bio": "Skilled in client communication, talent acquisition, and product scouting. Passionate about identifying top-tier talent and discovering innovative products to drive business growth.",
+  "bio": "Skilled in client communication, talent acquisition, and product scouting.",
   "image": "/king.jpeg",
   "social": {
     "linkedin": "https://www.linkedin.com/in/abdul-muqeet-naeem-744211292",
@@ -75,9 +75,7 @@ const team = [
     "Client Communication",
     "Talent Acquisition",
     "Product Hunting",
-    "Market Research",
     "Negotiation & Sales",
-    "Recruitment Strategies",
   ]
 }
 
