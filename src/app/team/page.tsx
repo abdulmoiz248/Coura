@@ -36,11 +36,51 @@ const team = [
  
     image: "/haris.jpg",
     social: {
-      linkedin: "#",
+      linkedin: "/",
       github: "https://github.com/ch-harisimran",
     },
     skills: ["React", "React Native", "TypeScript"],
   },
+  {
+    name: "Sikander Mukhtar",
+    role: "Full Stack Developer",
+    bio: "Proficient in bridging the gap between front-end interactions and back-end logic, ensuring high performance, security, and usability.",
+    image: "/sikander.jpeg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/sikander-mukhtar-1b82bb292/",
+      github: "https://github.com/sikandermukhtar"
+    },
+    skills: ["React JS", "Django", "React Native"]
+},
+{
+  name: "Ahmad Aslam",
+  role: "Front End Developer",
+  bio: "Passionate about AI-driven solutions, with expertise in building scalable machine learning systems.",
+  image: "/aslam.jpeg",
+  social: {
+    linkedin: "https://www.linkedin.com/in/muhammad-ahmad-aslam-84635b266/",
+    github: "https://github.com/AhmadAslam69"
+  },
+  skills: ["C++", "HTML, CSS, JS", "React", "MySql", "Digital Marketing" ]
+},{
+  "name": "Abdul Muqeet",
+  "role": "Client Relations & Talent Acquisition Specialist",
+  "bio": "Skilled in client communication, talent acquisition, and product scouting. Passionate about identifying top-tier talent and discovering innovative products to drive business growth.",
+  "image": "/king.jpeg",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/abdul-muqeet-naeem-744211292",
+    "github": "/"
+  },
+  "skills": [
+    "Client Communication",
+    "Talent Acquisition",
+    "Product Hunting",
+    "Market Research",
+    "Negotiation & Sales",
+    "Recruitment Strategies",
+  ]
+}
+
   
 ]
 
