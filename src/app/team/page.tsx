@@ -82,20 +82,19 @@ const team = [
 {
   "name": "MUHAMMAD WAHB USMAN",
   "role": "Mobile App Developer",
-  "bio": "Experienced Mobile App Developer with expertise in creating seamless applications. Skilled in TikTok marketing, Shopify website design, and eBay product hunting. Confident speaker with a passion for innovation and business growth.",
+  "bio": "Experienced Mobile App Developer with expertise in creating seamless applications. Skilled in TikTok marketing, Shopify website design.",
   "image": "/wahb.jpeg",
   "social": {
     "linkedin": "https://pk.linkedin.com/in/muhammad-wahb-usman-b89a25355",
     "github": "https://github.com/wahb11"
   },
   "skills": [
-    "Mobile App Development",
+     
     "UI/UX Design",
     "React Native",
     "TikTok Marketing",
     "Shopify Website Designing",
-    "Product Hunting on eBay",
-    "Public Speaking",
+    
     "E-Commerce Strategies"
   ]
 }
