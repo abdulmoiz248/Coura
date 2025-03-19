@@ -7,7 +7,7 @@ export default function TestimonialsSection() {
     {
       name: "David Chen",
       role: "Technical Lead",
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/aslam.jpeg",
       quote:
         "Coura delivered our enterprise solution with exceptional quality. Their development process and attention to detail are outstanding.",
       company: "TechVision Corp",
@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
 
                     <div className="mt-6 flex items-center">
                       <span
-                        className={`text-xs font-mono px-2 py-1 rounded-md bg-gradient-to-r ${testimonial.gradientClass} opacity-10 text-white`}
+                        className={`text-xs font-mono px-2 py-1 rounded-md bg-white opacity-50 text-black`}
                       >
                         {testimonial.projectType}
                       </span>

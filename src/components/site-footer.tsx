@@ -47,8 +47,8 @@ export function SiteFooter() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">Contact</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <p>Email: hello@coura.dev</p>
-              <p>Phone: (555) 123-4567</p>
+              <p>Email: coura.tech</p>
+              <p>Phone: +92 321 4281575 </p>
               <p>Address: Lahore,Pakistan</p>
             </div>
           </div>
