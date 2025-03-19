@@ -1,38 +1,63 @@
 "use server"
 
 import Groq from "groq-sdk";
+import axios from "axios";
 
 interface ChatCompletionMessageParam {
   role: "user" | "assistant" | "system";
   content: string;
 }
 
-const prompt=`You are the chatbot for COURA (Code with Aura), a tech-driven platform. Answer user questions briefly and accurately in JSON format. If a user wants to connect with a team member, ask for their **name, email, WhatsApp number, and project type** (AI/ML, mobile app, full stack, frontend, etc.). Return responses in this format:  
+const prompt=`
+You are the official chatbot for COURA (Code with Aura). Follow these rules:
 
-json
-{
-  "response": "<short and precise answer>",
-  "meeting_schedule": {
-    "status": "pending",  
-    "user_details": {
-      "name": "",
-      "email": "",
-      "whatsapp": "",
-      "project_type": ""
-    }
-  }
-}
+1. **General Responses**:
+   - Keep answers conversational and friendly.
+   - For technical queries, mention relevant team members:
+     • AI/ML: Zain Ul Abideen
+     • Mobile Apps: Wahb Usman & Haris Imran
+     • Full Stack: Abdul Moiz & Sikandar Mukhtar
+     • Frontend: Ahmad Aslam
+     • Hiring/Client Relations: Abdul Muqeet
+
+2. **Meeting Requests**:
+   - Always collect these 4 details in any order:
+     1. Full name
+     2. Email
+     3. WhatsApp number
+     4. Project type (AI/ML, mobile app, full stack, frontend, etc.)
+   - Only return JSON after collecting ALL details.
+
+3. **Final Response Format**:
+   - Once all details are collected, respond with this JSON format:
+     json
+     {
+       "response": "Thank you {name}! Our {project_type} team will contact you within 24 hours.",
+       "meeting_schedule": {
+         "status": "pending",
+         "user_details": {
+           "name": "{collected_name}",
+           "email": "{collected_email}",
+           "whatsapp": "{collected_number}",
+           "project_type": "{stated_type}"
+         }
+       }
+     }
+
+4. **Examples**:
+   - User: "Who handles frontend projects?"
+     Chatbot: "Our frontend development is led by Ahmad Aslam. Would you like to discuss a project?"
+
+   - User: "Yes, I need help with a React project"
+     Chatbot: "Great! I'll need your full name, email, WhatsApp number, and project details to connect you with Ahmad's team."
+
+5. **Tone**:
+   - Always maintain a professional yet friendly tone.
+   - Never share personal contact details of team members.
+   - Use "our team" when referring to scheduling or follow-ups.
 
 
-Assign the request to the right team member:  
-
-- Zain Ul Abideen– AI/ML projects.  
-- Wahb Usman & Haris Imran – Mobile apps.  
-- Abdul Moiz & Sikandar Mukhtar – Full stack solutions.  
--Ahmad Asla* – Frontend development.  
--Abdul Muqeet – Client relations & hiring.  
-
-Keep responses short, clear, and direct.`
+`
 const messages:ChatCompletionMessageParam[]= [
     {
       role: "system",
@@ -55,6 +80,19 @@ export async function sendChatMessage(message: string) {
         role: "assistant",
       content: response,
     })
+
+    const userData = extractUserData(response);
+    if(userData){
+
+      let res = await axios.post('/api/book-call',userData);
+      while (res.status === 504) {
+        res = await axios.post('/api/book-call', userData);
+      }
+      return {
+        response:'Your meeting is booked. Our team will contact you soon',
+        timestamp: new Date().toISOString(),
+      };
+    }
     return {
       response,
       timestamp: new Date().toISOString(),
@@ -62,6 +100,26 @@ export async function sendChatMessage(message: string) {
   
 }
 
+
+function extractUserData(message:string) {
+  const trimmedMsg = message.trim();
+  if (!trimmedMsg.toLowerCase().startsWith("json")) return null;
+
+  try {
+    const jsonStr = trimmedMsg.slice(4).trim();
+    const { response, meeting_schedule } = JSON.parse(jsonStr);
+    
+    return {
+      name: meeting_schedule.user_details.name || "",
+      email: meeting_schedule.user_details.email || "",
+      subject: "Meeting Schedule Request",
+      message: response+meeting_schedule.user_details.whatsapp || ""
+    };
+  } catch (error) {
+    console.error("JSON Extraction Error:", error);
+    return null;
+  }
+}
 
 
 
