@@ -7,6 +7,7 @@ import { BookCallModal } from "@/components/book-call-modal"
 import AboutUs from "@/components/AboutUs"
 import  TestimonialsSection  from "@/components/Testimonials"
 import Image from "next/image"
+import CouraHero from "@/components/Hero"
 
 
 
@@ -34,28 +35,7 @@ export default function Home() {
      
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 md:py-32">
-          <div className="absolute inset-0 -z-10">
-            <div className="gradient-bg absolute inset-0" />
-          </div>
-          <section className="relative overflow-hidden">
-                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black-500/20 via-transparent to-transparent" />
-                 <div className="container mx-auto px-4 py-24 relative">
-                   <motion.div
-                     initial={{ opacity: 0, y: 20 }}
-                     animate={{ opacity: 1, y: 0 }}
-                     transition={{ duration: 0.8 }}
-                     className="text-center space-y-6"
-                   >
-                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF] ">
-                       Coura
-                       
-                     </h1>
-                     <p className="text-2xl md:text-3xl font-light text-slate-300">Code with Aura</p>
-                   </motion.div>
-                 </div>
-               </section>
-        </section>
+      <CouraHero/>
  <AboutUs/>
     
        
