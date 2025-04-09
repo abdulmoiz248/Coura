@@ -46,9 +46,9 @@ export default function AboutUs() {
                 </Button>
               </Link>
               <Link href="/projects">
-                <Button variant="outline" size="lg" className="border-slate-700 text-slate-300 hover:bg-slate-900/50">
+                {/* <Button variant="outline" size="lg" className="border-slate-700 text-slate-300 hover:bg-slate-900/50">
                   View Our Work
-                </Button>
+                </Button> */}
               </Link>
             </motion.div>
           </motion.div>

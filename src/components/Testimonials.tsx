@@ -5,35 +5,34 @@ import { Code2, Terminal } from "lucide-react"
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "David Chen",
-      role: "Technical Lead",
-      image: "/aslam.jpeg",
+      name: "M Ahmad",
+      role: "CEO",
+     
       quote:
-        "Coura delivered our enterprise solution with exceptional quality. Their development process and attention to detail are outstanding.",
-      company: "TechVision Corp",
+        "Coura built Zero Limit Apparel with precision and style. The design, performance, and overall execution were top-tier — exceeded expectations in every way.",
+      company: "Zero Limit Apparel",
       gradientClass: "from-[#00FF94] to-[#00B8FF]",
-      projectType: "Enterprise Software",
+      projectType: "E-Commerce Platform",
     },
     {
-      name: "Sarah Williams",
-      role: "CTO",
-      image: "/placeholder.svg?height=100&width=100",
-      quote:
-        "The team at Coura transformed our concept into a scalable solution. Their technical expertise is truly world-class.",
-      company: "FinTech Solutions",
+      name: "Rana M. Ajmal",
+      role: "Instructor",
+ 
+      quote:"Coura delivered a sleek, user-friendly food app with flawless functionality. From UI to performance, everything was built with care and expertise.",
+      company: "Food App",
       gradientClass: "from-[#FF3366] to-[#CB00FF]",
-      projectType: "FinTech Platform",
+      projectType: "Food Delievery  Platform",
     },
     {
-      name: "Michael Zhang",
-      role: "Product Manager",
-      image: "/placeholder.svg?height=100&width=100",
-      quote:
-        "Working with Coura was seamless. They brought innovative solutions to complex problems while maintaining excellent code quality.",
-      company: "DataFlow Systems",
-      gradientClass: "from-[#00FFF0] to-[#0066FF]",
-      projectType: "Data Analytics Suite",
+      name: "Muhammad Faisal ",
+      role: "Govt Officer",
+ 
+      quote:"Coura delivered NexaLink with exceptional quality and reliability. The platform was built with performance, scalability, and user experience at its core.",
+      company: "Messaging Module",
+      gradientClass: "from-[#FF3366] to-[#CB00FF]",
+      projectType: "Chatting Module",
     },
+  
   ]
 
   return (
@@ -99,10 +98,10 @@ export default function TestimonialsSection() {
           {/* Stats section */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: "Projects Delivered", value: "200+" },
+              { label: "Projects Delivered", value: "50+" },
               { label: "Client Satisfaction", value: "99%" },
-              { label: "Team Members", value: "50+" },
-              { label: "Years Experience", value: "10+" },
+              { label: "Team Members", value: "10+" },
+              { label: "Years Experience", value: "3+" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00FF94] to-[#00B8FF]">

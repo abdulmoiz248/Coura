@@ -8,6 +8,7 @@ import AboutUs from "@/components/AboutUs"
 import  TestimonialsSection  from "@/components/Testimonials"
 import Image from "next/image"
 import CouraHero from "@/components/Hero"
+import Link from "next/link"
 
 
 
@@ -17,12 +18,14 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A full-featured online shopping platform with real-time inventory.",
-    image: "/zero.png",
+    image: "/dark.jpeg",
+     link:'https://zero-limit.vercel.app/'
   },
   {
     title: "BakeBot",
     description: "An Ai chatbot that helps you in cooking",
     image: "/bakebot.jpg",
+    link:''
   },
  
 ]
@@ -53,6 +56,7 @@ export default function Home() {
   
   <div className={`mt-16 grid gap-8 ${projects.length === 2 ? "grid-cols-1 sm:grid-cols-2 justify-center" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
     {projects.map((project) => (
+        <Link href={project.link}  className="flex flex-col items-center">
       <Card key={project.title} className="overflow-hidden mx-auto w-full max-w-[400px]">
         <Image
           src={project.image}
@@ -62,10 +66,13 @@ export default function Home() {
           className="aspect-video object-contain transition-transform duration-300 hover:scale-105"
         />
         <CardHeader>
+        
           <CardTitle className="text-center">{project.title}</CardTitle>
+         
           <CardDescription className="text-center">{project.description}</CardDescription>
         </CardHeader>
       </Card>
+       </Link> 
     ))}
   </div>
 </section>
