@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import {  motion} from 'framer-motion'
+
 import { BookCallModal } from "@/components/book-call-modal"
 import AboutUs from "@/components/AboutUs"
 import  TestimonialsSection  from "@/components/Testimonials"
@@ -56,7 +56,7 @@ export default function Home() {
   
   <div className={`mt-16 grid gap-8 ${projects.length === 2 ? "grid-cols-1 sm:grid-cols-2 justify-center" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
     {projects.map((project) => (
-        <Link href={project.link}  className="flex flex-col items-center">
+        <Link href={project.link}   key={project.title}  className="flex flex-col items-center">
       <Card key={project.title} className="overflow-hidden mx-auto w-full max-w-[400px]">
         <Image
           src={project.image}
