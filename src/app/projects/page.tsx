@@ -10,7 +10,7 @@ const projects = [
     description: "An e-commerce platform for streetwear apparel with real-time inventory and analytics.",
     image: "/zero.png",
     category: "Web Development",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"]
     link: "https://zero-limit.vercel.app/",
   },
   {
